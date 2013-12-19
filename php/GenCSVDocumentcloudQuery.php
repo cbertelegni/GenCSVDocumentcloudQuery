@@ -4,7 +4,7 @@ class GenCSVDocumentcloud{
 	get data of documentcloud from a query
 	*/
 	var $query;
-	var $per_page; // default 100
+	var $per_page; // default 1000
 	var $page = 0;
 
 	public function __construct($q, $x_page = 1000){
