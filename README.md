@@ -6,10 +6,8 @@ Generate a CSV file from a Documentcloud query.
 
 ## Usage
 
-## Get the project
-
 ```
-git clone git@github.com:cbertelegni/GenCSVDocumentcloudQuery.git
+$ git clone git@github.com:cbertelegni/GenCSVDocumentcloudQuery.git
 ```
 
 
