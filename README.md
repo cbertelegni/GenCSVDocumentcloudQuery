@@ -10,26 +10,24 @@ Generate a CSV file from a Documentcloud query.
 $ git clone git@github.com:cbertelegni/GenCSVDocumentcloudQuery.git
 ```
 
-
-## Run in PHP
-
 ```
 $ cd ./GenCSVDocumentcloudQuery/php/
 ```
 
-* Open main.php
-* Edit $query, for example:
-  * get all documents from a project:
+* Open main_sample.php
+* Edit $query, for example, get all documents from a project:
 
-```
-   $query = "projectid:7607-poder-legislativo"
+```php
+$query = "projectid:7607-poder-legislativo"
+$dc = new GenCSVDocumentcloud($query);
+$dc->main();
 ```
 
 * Run code
 
 ```
 $ cd php
-$ php main.php
+$ php main_sample.php
 ```
 
 
