@@ -6,10 +6,16 @@ class GenCSVDocumentcloud{
 	var $query;
 	var $per_page; // default 1000
 	var $page = 0;
+	var $output_folder;
 
-	public function __construct($q, $x_page = 1000){
+	public function __construct($q, $x_page = 1000, $output_folder="output"){
 		$this->query = $q;
 		$this->per_page = $x_page;
+		$this->output_folder = $output_folder;
+		
+		if (!file_exists($this->output_folder)) {
+			mkdir($this->output_folder, 0777);
+		}
 	}
 
 	private function get_data(){ // get data from documentcloud
@@ -26,7 +32,7 @@ class GenCSVDocumentcloud{
 	}
 
 	public function main(){ // main function, create csv 
-		$fp = fopen("DC_$this->query.csv", 'w'); // open csv
+		$fp = fopen("$this->output_folder/DC_$this->query.csv", 'w'); // open csv
 
 		fputcsv($fp, array( "document_title", "document_url", "document_id", "Description", "Pages" )); // set headers csv
 

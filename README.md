@@ -25,9 +25,10 @@ $ cd ./GenCSVDocumentcloudQuery/php/
    $query = "projectid:7607-poder-legislativo"
 ```
 
-* In a terminal execute
+* Run code
 
 ```
+$ cd php
 $ php main.php
 ```
 
